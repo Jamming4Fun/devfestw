@@ -209,6 +209,37 @@
                         <span class="infoText">O evento é organizado e planejado pelo grupo Open Sampa, com o principal objetivo de acolher a comunidade de desenvolvedoras de São Paulo. O GDG Open Sampa é um grupo de participação aberta, apoiado oficialmente pela Google e que tem por objetivos além de difundir e debater tecnologias e plataformas Google, também fomentar a criação de projetos e códigos que façam uso destas.</span>
                     </div>
                 </div>
+                <div id="abSiteWrapper">
+                    <div class="abSiteBox">
+                        <h2 class="infoTitle">Local:</h2>
+                        <div class="infoText"></div>
+                        <div class="gmap">
+                            <style type="text/css">
+                                  html { height: 100% }
+                                  body { height: 100%; margin: 0; padding: 0 }
+                                  #map_canvas { height: 100% }
+                            </style>
+                            <div id="map_canvas" style="width:300px; height:300px"></div>
+                                    <script type="text/javascript" 
+                                        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD5CY-P9O_C-Rj5b-MjluGB_rzoNFGJ_5E&sensor=false">
+                                    </script>
+                                    <script type="text/javascript">
+                                        var mapOptions = {
+                                          zoom: 12,
+                                          center: new google.maps.LatLng(39.104489, -84.512329),
+                                          mapTypeId: google.maps.MapTypeId.ROADMAP,
+                            streetViewControl: false,
+                                          panControl: false,
+                            mapTypeControl: false,
+                                          zoomControl: false,
+                                          scaleControl: false
+                                        };
+                                        var map = new google.maps.Map(document.getElementById("map_canvas"),
+                                            mapOptions);
+                                    </script>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div id="programWrapper">
                 &nbsp;
