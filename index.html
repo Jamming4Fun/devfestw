@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="utf-8" />
+
+        <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+        Remove this if you use the .htaccess -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+        <title>index</title>
+        <meta name="description" content="" />
+        <meta name="author" content="GDG Open Sampa" />
+
+        <meta name="viewport" content="width=1366, initial-scale=1.0" />
+
+        <!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link href='http://fonts.googleapis.com/css?family=Corben|Open+Sans:400,800,600' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="css/mainstyle.css">
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(function() {
+                var hh = $('#header').height();
+                var ch = $('#contentWrapper').height();
+                var nbh = $('#navbar').height();
+                var boxesH = (hh + ch + nbh);
+                var wh = $(window).height();
+                 
+                if (boxesH < wh) {
+                    var bottomBoxH = wh - (hh + ch);
+                    
+                    if (bottomBoxH > nbh) {
+                        var blankSpace = bottomBoxH - nbh;
+                        var ContentMargin = blankSpace / 2;
+                        
+                        $('#contentWrapper').css({
+                            'margin-top': ContentMargin,
+                            'margin-bottom': ContentMargin 
+                        });
+                    }                    
+                }
+                
+                if (boxesH > wh){
+                    var smallerHH = hh - nbh;
+                    var devfestwH = $('#devfestw').height();
+                    var devfestwPercent = (100 * smallerHH) / devfestwH;
+                    $('#devfestw').css({
+                            height: smallerHH,
+                            width: 'auto' });
+                    var opensampaH = $('#devfestw').height();
+                    var opensampaNewH = (opensampaH * devfestwPercent) / 100;
+                    $('#opensampa').css({
+                            height: opensampaNewH,
+                            width: 'auto',
+                            top: (18 * devfestwPercent) / 100 });
+                    $('#header').css('height', smallerHH);
+                    
+                    hh = $('#header').height();
+                    ch = $('#contentWrapper').height();
+                    nbh = $('#navbar').height();
+                    boxesH = (hh + ch + nbh);
+                    
+                    var leftSpace = wh - boxesH;
+                    if (leftSpace > 0) {
+                        $('#contentWrapper').css('margin-bottom', leftSpace);
+                    }  
+                }
+                
+                $('#mainWrapper').css('height', wh);
+                $('#aboutWrapper').css('height', wh);
+                $('#programWrapper').css('height', wh);
+                
+                
+                //start fixed at scroll nav
+                var top = $('#navbar').offset().top - parseFloat($('#navbar').css('marginTop').replace(/auto/,0));
+                $(window).scroll(function (event) {
+                    var y = $(this).scrollTop();
+                    if (y >= top) {
+                      $('#navbar').addClass('fixed');
+                    } else {
+                      $('#navbar').removeClass('fixed');
+                    }
+                });
+                
+                function removeAtive() {
+                    $('#about').removeClass('active');
+                    $('#program').removeClass('active');
+                }
+                
+                //scroll links
+                $("#about").click(function(){
+                    removeAtive();                  
+                    $('html, body').animate({
+                        scrollTop: $("#aboutWrapper").offset().top
+                    }, 800);
+                    $('#about').addClass('active');
+                    
+                });
+                $("#program").click(function(){
+                    removeAtive();
+                    $('html, body').animate({
+                        scrollTop: $("#programWrapper").offset().top
+                    }, 800);
+                    $('#program').addClass('active');
+                });
+                
+                //scroll arrow
+                $("#arrow").click(function(){
+                    removeAtive();
+                    var nbPosition = $("#navbar").offset().top;
+                    if (nbPosition < wh) {
+                        $('html, body').animate({
+                            scrollTop: $("#aboutWrapper").offset().top
+                        }, 800);
+                        $('#about').addClass('active');
+                    }
+                    else if (nbPosition > wh) {
+                        $('html, body').animate({
+                            scrollTop: $("#header").offset().top
+                        }, 800);
+                    }
+                    
+                });
+                
+                //send paper link. Will open a new window.
+                $("#activity").click(function(){
+                    window.open("http://goo.gl/L9VxK", '_blank');
+                });
+                //link to registration. Will open a new window.
+                $("#register").click(function(){
+                    window.open("http://goo.gl/mxdAg", '_blank');
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div id="pageWrapper">
+            <div id="mainWrapper">
+                <header id="header">
+                    <img src="img/devfestw.png" class="logo devfestw" id="devfestw" width="320" height="147"/>
+                    <img src="img/opensampa.png" class="logo opensampa" id="opensampa" width="411" height="134"/>
+                </header>
+                <div id="contentWrapper">
+                    <div id="register" class="goog-inline-block jfk-button jfk-button-primary register-bt" style="-webkit-user-select: none;" >
+                        <div class="goog-inline-block jfk-button-outer-box">
+                            <div class="goog-inline-block jfk-button-inner-box">
+                                <div class="goog-inline-block jfk-button-caption">
+                                    <span class="reg-top">Faça sua</span> <br />
+                                    <span class="reg-bottom">Inscrição</span>
+                                </div>
+                                <div class="goog-inline-block jfk-button-dropdown">&nbsp;</div>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="event-date">4 de Abril <br /> 2013</span>
+                    <div id="panel-top">
+                        <div id="droidHead">&nbsp;</div>
+                    </div>
+                    <div id="panel-middle">
+                        <div id="droidHands">&nbsp;</div>
+                        <div id="divasWrapper">
+                            <div class="divaWrapper">
+                                <div class="divaPhoto ada">&nbsp;</div>
+                                <span class="divaName">Ada Lovelace</span>
+                            </div>
+                            <div class="divaWrapper">
+                                <div class="divaPhoto grace">&nbsp;</div>
+                                <span class="divaName">Grace Hopper</span>
+                            </div>
+                            <div class="divaWrapper">
+                                <div class="divaPhoto anita">&nbsp;</div>
+                                <span class="divaName">Anita Borg</span>
+                            </div>
+                            <div class="divaWrapper">
+                                <div class="divaPhoto shafi">&nbsp;</div>
+                                <span class="divaName">Shafi Goldwasser</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="panel-bottom">
+                        <div id="droidFeet">&nbsp;</div>
+                    </div>
+                </div>
+                <nav class="gbqfb" id="navbar">
+                    <ul class="nav" >
+                        <li id="about">Sobre o Evento</li>
+                        <li id="program">Programação</li>
+                        <li id="activity">Envie sua Atividade</li>
+                        <li id="arrow" class="top">&nbsp;</li>
+                    </ul>
+                </nav>
+            </div>
+            <div id="aboutWrapper">
+                <div id="abInfoWrapper">
+                    <div class="abInfoBox">
+                        <h2 class="infoTitle">O que é um DevFestW?</h2>
+                        <span class="infoText">DevFestW é uma série de eventos liderados pela comunidade, que têm sessões técnicas centradas em torno das tecnologias e plataformas da Google para desenvolvedores. DevFestW é focado especificamente em reunir as mulheres da comunidade de desenvolvedores locais para ensinar, aprender, debater, codificar e fazer networking.</span>
+                        
+                        <h2 class="infoTitle">O DevFestW é apenas para mulheres?</h2>
+                        <span class="infoText">Claro que não, pelo contrário. Todos são bem-vindos! <br />O evento é uma oportunidade para que as comunidades de desenvolvedores sejam mais conscientes sobre a inclusão feminina.</span>
+                    </div>
+                    <div class="abInfoBox">
+                        <h2 class="infoTitle">Como um DevFestW difere de outros DevFests?</h2>
+                        <span class="infoText">Enquanto que ambos eventos são similares, o DevFestW dá enfase à inclusão feminina.</span>
+                        
+                        <h2 class="infoTitle">Qual a relação entre o GDG Open Sampa e o DevFestW São Paulo?</h2>
+                        <span class="infoText">O evento é organizado e planejado pelo grupo Open Sampa, com o principal objetivo de acolher a comunidade de desenvolvedoras de São Paulo. O GDG Open Sampa é um grupo de participação aberta, apoiado oficialmente pela Google e que tem por objetivos além de difundir e debater tecnologias e plataformas Google, também fomentar a criação de projetos e códigos que façam uso destas.</span>
+                    </div>
+                </div>
+            </div>
+            <div id="programWrapper">
+                &nbsp;
+            </div>
+        </div>
+    </body>
+</html>
