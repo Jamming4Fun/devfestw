@@ -109,4 +109,8 @@ $(function() {
     $("#register").click(function(){
         window.open("http://goo.gl/mxdAg", '_blank');
     });
+    //link to registration. Will open a new window.
+    $("#gdgospAd").click(function(){
+        window.open("goo.gl/X4VCb", '_blank');
+    });
 });
