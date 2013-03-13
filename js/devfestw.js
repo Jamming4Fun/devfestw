@@ -54,6 +54,19 @@ $(function() {
     var top = $('#navbar').offset().top - parseFloat($('#navbar').css('marginTop').replace(/auto/,0));
     $(window).scroll(function (event) {
         var y = $(this).scrollTop();
+        
+        if (y < wh) {
+        	removeAtive();
+        }
+        else if (y >= wh && y < (wh * 2)){
+        	removeAtive();
+        	$('#about').addClass('active');
+        }
+        else {
+        	removeAtive();
+        	$('#program').addClass('active');
+        }
+        
         if (y >= top) {
           $('#navbar').addClass('fixed');
         } else {
