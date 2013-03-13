@@ -93,7 +93,7 @@ $(function() {
             }, 800);
             $('#about').addClass('active');
         }
-        else if (nbPosition > wh) {
+        else if (nbPosition > (wh - 60)) {
             $('html, body').animate({
                 scrollTop: $("#header").offset().top
             }, 800);
@@ -109,8 +109,12 @@ $(function() {
     $("#register").click(function(){
         window.open("http://goo.gl/mxdAg", '_blank');
     });
-    //link to registration. Will open a new window.
-    $("#gdgospAd").click(function(){
+    //link to gdg +page. Will open a new window.
+    $("#gdgospAd, #opensampa").click(function(){
         window.open("http://goo.gl/X4VCb", '_blank');
+    });
+    //link to DevFestW World website. Will open a new window.
+    $("#devfestAd").click(function(){
+        window.open("http://devfest.info", '_blank');
     });
 });

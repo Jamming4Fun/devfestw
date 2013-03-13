@@ -76,7 +76,7 @@ img.opensampa {
 }
 
 .reg-top {
-	font-size: 20px !important;
+	font-size: 20px;
 	line-height: 25px !important;
 }
 .reg-bottom {
@@ -127,7 +127,10 @@ img.opensampa {
     -moz-box-shadow: 1px 1px 1px rgba(0,0,0,.3);
     box-shadow: 1px 1px 1px rgba(0,0,0,.3);
     text-shadow: 1px 1px rgba(0,0,0,0.3);
+}
     
+.contentBt {
+	font-size: 16px;
 }
 
 .event-date {
