@@ -111,6 +111,6 @@ $(function() {
     });
     //link to registration. Will open a new window.
     $("#gdgospAd").click(function(){
-        window.open("goo.gl/X4VCb", '_blank');
+        window.open("http://goo.gl/X4VCb", '_blank');
     });
 });
