@@ -21,119 +21,179 @@
         
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <script src="js/devfestw.js" type="text/javascript"></script>
-        <script type="text/javascript">
-            
-        </script>
     </head>
     <body>
         <div id="pageWrapper">
-            <div id="mainWrapper">
-                <header id="header">
-                    <img src="img/devfestw.png" class="logo devfestw" id="devfestw" width="320" height="147"/>
-                    <img src="img/opensampa.png" class="logo opensampa" id="opensampa" width="411" height="134"/>
-                </header>
-                <div id="contentWrapper">
-                    <div id="register" class="goog-inline-block jfk-button jfk-button-primary register-bt" style="-webkit-user-select: none;" >
-                        <div class="goog-inline-block jfk-button-outer-box">
-                            <div class="goog-inline-block jfk-button-inner-box">
-                                <div class="goog-inline-block jfk-button-caption">
-                                    <span class="reg-top">Faça sua</span> <br />
-                                    <span class="reg-bottom">Inscrição</span>
+            <div id="middleWrapper">
+                <div id="mainWrapper">
+                    <header id="header">
+                        <img src="img/devfestw.png" class="logo devfestw" id="devfestw" width="320" height="147"/>
+                        <img src="img/opensampa.png" class="logo opensampa" id="opensampa" width="411" height="134"/>
+                    </header>
+                    <div id="contentWrapper">
+                        <div id="register" class="goog-inline-block jfk-button jfk-button-primary register-bt" style="-webkit-user-select: none;" >
+                            <div class="goog-inline-block jfk-button-outer-box">
+                                <div class="goog-inline-block jfk-button-inner-box">
+                                    <div class="goog-inline-block jfk-button-caption">
+                                        <span class="reg-top">Faça sua</span> <br />
+                                        <span class="reg-bottom">Inscrição</span>
+                                    </div>
+                                    <div class="goog-inline-block jfk-button-dropdown">&nbsp;</div>
                                 </div>
-                                <div class="goog-inline-block jfk-button-dropdown">&nbsp;</div>
+                            </div>
+                        </div>
+                        <span class="event-date">4 de Abril <br /> 2013</span>
+                        <div id="panel-top">
+                            <div id="droidHead">&nbsp;</div>
+                        </div>
+                        <div id="panel-middle">
+                            <div id="droidHands">&nbsp;</div>
+                            <div id="divasWrapper">
+                                <div class="divaWrapper">
+                                    <div class="divaPhoto ada">&nbsp;</div>
+                                    <span class="divaName">Ada Lovelace</span>
+                                </div>
+                                <div class="divaWrapper">
+                                    <div class="divaPhoto grace">&nbsp;</div>
+                                    <span class="divaName">Grace Hopper</span>
+                                </div>
+                                <div class="divaWrapper">
+                                    <div class="divaPhoto anita">&nbsp;</div>
+                                    <span class="divaName">Anita Borg</span>
+                                </div>
+                                <div class="divaWrapper">
+                                    <div class="divaPhoto shafi">&nbsp;</div>
+                                    <span class="divaName">Shafi Goldwasser</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="panel-bottom">
+                            <div id="droidFeet">&nbsp;</div>
+                        </div>
+                    </div>
+                    <nav class="gbqfb" id="navbar">
+                        <ul class="nav" >
+                            <li id="about">Sobre o Evento</li>
+                            <li id="program">Programação</li>
+                            <li id="activity">Envie sua Atividade</li>
+                            <li id="arrow" class="top">&nbsp;</li>
+                        </ul>
+                    </nav>
+                </div>
+                <div id="aboutWrapper">
+                    <div id="abInfoWrapper">
+                        <div class="abInfoBox">
+                            <h2 class="infoTitle">O que é um DevFestW?</h2>
+                            <span class="infoText">DevFestW é uma série de eventos liderados pela comunidade, que têm sessões técnicas centradas em torno das tecnologias e plataformas da Google para desenvolvedores. DevFestW é focado especificamente em reunir as mulheres da comunidade de desenvolvedores locais para ensinar, aprender, debater, codificar e fazer networking.</span>
+                            
+                            <h2 class="infoTitle">O DevFestW é apenas para mulheres?</h2>
+                            <span class="infoText">Claro que não, pelo contrário. Todos são bem-vindos! <br />O evento é uma oportunidade para que as comunidades de desenvolvedores sejam mais conscientes sobre a inclusão feminina.</span>
+                        </div>
+                        <div class="abInfoBox">
+                            <h2 class="infoTitle">Como um DevFestW difere de outros DevFests?</h2>
+                            <span class="infoText">Enquanto que ambos eventos são similares, o DevFestW dá enfase à inclusão feminina.</span>
+                            
+                            <h2 class="infoTitle">Qual a relação entre o GDG Open Sampa e o DevFestW São Paulo?</h2>
+                            <span class="infoText">O evento é organizado e planejado pelo grupo Open Sampa, com o principal objetivo de acolher a comunidade de desenvolvedoras de São Paulo. O GDG Open Sampa é um grupo de participação aberta, apoiado oficialmente pela Google e que tem por objetivos além de difundir e debater tecnologias e plataformas Google, também fomentar a criação de projetos e códigos que façam uso destas.</span>
+                        </div>
+                    </div>
+                    <div id="abSiteWrapper">
+                        <div class="abSiteBox">
+                            <h2 class="infoTitle localTitle">Local:</h2>
+                            <div class="infoText local">Faria Lima, 3477 - 18º andar - São Paulo</div>
+                            <div class="infoText local">Entrada a partir das 18h00</div>
+                        </div>
+                        <div class="abSiteBox">
+                            <div class="gmap">
+                                <style type="text/css">
+                                      html { height: 100% }
+                                      body { height: 100%; margin: 0; padding: 0 }
+                                      #map_canvas { height: 100% }
+                                </style>
+                                <div id="map_canvas" style="width:451px; height:250px"></div>
+                                <script type="text/javascript" 
+                                    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBAotdWrse9bGWmw_zsqkmDHoMp6u2lSK4&sensor=false">
+                                </script>
+                                <script type="text/javascript">
+                                    var mapOptions = {
+                                      zoom: 15,
+                                      center: new google.maps.LatLng(-23.586938, -46.682153),
+                                      mapTypeId: google.maps.MapTypeId.ROADMAP,
+                                      streetViewControl: false,
+                                      panControl: false,
+                                      mapTypeControl: false,
+                                      zoomControl: false,
+                                      scaleControl: false
+                                    };
+                                    
+                                    var map = new google.maps.Map(document.getElementById("map_canvas"),
+                                        mapOptions);
+                                        
+                                    var marker = new google.maps.Marker({
+                                        position: new google.maps.LatLng(-23.586938, -46.682153),
+                                        map: map,
+                                    });
+                                </script>
                             </div>
                         </div>
                     </div>
-                    <span class="event-date">4 de Abril <br /> 2013</span>
-                    <div id="panel-top">
-                        <div id="droidHead">&nbsp;</div>
-                    </div>
-                    <div id="panel-middle">
-                        <div id="droidHands">&nbsp;</div>
-                        <div id="divasWrapper">
-                            <div class="divaWrapper">
-                                <div class="divaPhoto ada">&nbsp;</div>
-                                <span class="divaName">Ada Lovelace</span>
-                            </div>
-                            <div class="divaWrapper">
-                                <div class="divaPhoto grace">&nbsp;</div>
-                                <span class="divaName">Grace Hopper</span>
-                            </div>
-                            <div class="divaWrapper">
-                                <div class="divaPhoto anita">&nbsp;</div>
-                                <span class="divaName">Anita Borg</span>
-                            </div>
-                            <div class="divaWrapper">
-                                <div class="divaPhoto shafi">&nbsp;</div>
-                                <span class="divaName">Shafi Goldwasser</span>
-                            </div>
+                </div>
+                <div id="programWrapper">
+                    <div id="progInfoWrapper">
+                        <div id="progTable" class="progBox">
+                            <table width="100%">
+                                <tr>
+                                    <th colspan="2" class="time"><h2>Programação</h2></th>
+                                </tr>
+                                <tr>
+                                    <td class="time">18:30</td>
+                                    <td class="description">Credenciamento</td>
+                                </tr>
+                                <tr>
+                                    <td class="time">19:00 - 20:00</td>
+                                    <td class="description">Abertura e Keynote</td>
+                                </tr>
+                                <tr>
+                                    <td class="time">20:00 - 20:30</td>
+                                    <td class="description">Atividade proposta por membros</td>
+                                </tr>
+                                <tr>
+                                    <td class="time">20:30 - 21:30</td>
+                                    <td class="description">Palestra Android</td>
+                                </tr>
+                                <tr>
+                                    <td class="time">21:30 - 22:00</td>
+                                    <td class="description">Atividade proposta por membros</td>
+                                </tr>
+                                <tr>
+                                    <td class="time">22:00 em diante</td>
+                                    <td class="description">Pizza</td>
+                                </tr>
+                            </table>
+                            <span class="announcement">
+                                Em breve informaremos o conteúdo de cada atividade. <strong>Programação sujeita a alterações.</strong>
+                            </span>
                         </div>
-                    </div>
-                    <div id="panel-bottom">
-                        <div id="droidFeet">&nbsp;</div>
-                    </div>
-                </div>
-                <nav class="gbqfb" id="navbar">
-                    <ul class="nav" >
-                        <li id="about">Sobre o Evento</li>
-                        <li id="program">Programação</li>
-                        <li id="activity">Envie sua Atividade</li>
-                        <li id="arrow" class="top">&nbsp;</li>
-                    </ul>
-                </nav>
-            </div>
-            <div id="aboutWrapper">
-                <div id="abInfoWrapper">
-                    <div class="abInfoBox">
-                        <h2 class="infoTitle">O que é um DevFestW?</h2>
-                        <span class="infoText">DevFestW é uma série de eventos liderados pela comunidade, que têm sessões técnicas centradas em torno das tecnologias e plataformas da Google para desenvolvedores. DevFestW é focado especificamente em reunir as mulheres da comunidade de desenvolvedores locais para ensinar, aprender, debater, codificar e fazer networking.</span>
-                        
-                        <h2 class="infoTitle">O DevFestW é apenas para mulheres?</h2>
-                        <span class="infoText">Claro que não, pelo contrário. Todos são bem-vindos! <br />O evento é uma oportunidade para que as comunidades de desenvolvedores sejam mais conscientes sobre a inclusão feminina.</span>
-                    </div>
-                    <div class="abInfoBox">
-                        <h2 class="infoTitle">Como um DevFestW difere de outros DevFests?</h2>
-                        <span class="infoText">Enquanto que ambos eventos são similares, o DevFestW dá enfase à inclusão feminina.</span>
-                        
-                        <h2 class="infoTitle">Qual a relação entre o GDG Open Sampa e o DevFestW São Paulo?</h2>
-                        <span class="infoText">O evento é organizado e planejado pelo grupo Open Sampa, com o principal objetivo de acolher a comunidade de desenvolvedoras de São Paulo. O GDG Open Sampa é um grupo de participação aberta, apoiado oficialmente pela Google e que tem por objetivos além de difundir e debater tecnologias e plataformas Google, também fomentar a criação de projetos e códigos que façam uso destas.</span>
-                    </div>
-                </div>
-                <div id="abSiteWrapper">
-                    <div class="abSiteBox">
-                        <h2 class="infoTitle">Local:</h2>
-                        <div class="infoText"></div>
-                        <div class="gmap">
-                            <style type="text/css">
-                                  html { height: 100% }
-                                  body { height: 100%; margin: 0; padding: 0 }
-                                  #map_canvas { height: 100% }
-                            </style>
-                            <div id="map_canvas" style="width:300px; height:300px"></div>
-                            <script type="text/javascript" 
-                                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyALcIULM56B430aBfs2IqfzJkSnazcmqao&sensor=false">
-                            </script>
-                            <script type="text/javascript">
-                                var mapOptions = {
-                                  zoom: 12,
-                                  center: new google.maps.LatLng(-23.682804,-46.595546),
-                                  mapTypeId: google.maps.MapTypeId.ROADMAP,
-                                  streetViewControl: false,
-                                  panControl: false,
-                                  mapTypeControl: false,
-                                  zoomControl: false,
-                                  scaleControl: false
-                                };
-                                var map = new google.maps.Map(document.getElementById("map_canvas"),
-                                    mapOptions);
-                            </script>
+                        <div id="sponsorsWrapper" class="progBox">
+                            <h2 class="infoTitle">Sponsors</h2>
+                            <div id="google">&nbsp;</div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div id="programWrapper">
-                &nbsp;
             </div>
         </div>
+        <script type="text/javascript">
+
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-39234533-1']);
+          _gaq.push(['_trackPageview']);
+        
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+        
+        </script>
     </body>
 </html>

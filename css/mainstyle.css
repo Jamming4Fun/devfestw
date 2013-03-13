@@ -1,4 +1,3 @@
-
 body {
 	margin: 0;
 	padding: 0;
@@ -10,18 +9,27 @@ body {
 	width: 100%;
 	margin: 0;
 	padding: 0;
+	vertical-align: top;
+}
+
+#middleWrapper {
+	position: relative;
+	margin: 0 auto;
+	width: 960px;
+	background: #fff;
+	vertical-align: top;
+	-webkit-box-shadow: rgba(0,0,0,0.2) 0px 2px 10px, inset rgba(0,0,0,0.2) 0px -1px 2px;
+    -moz-box-shadow: rgba(0,0,0,0.2) 0px 2px 10px, inset rgba(0,0,0,0.2) 0px -1px 2px;
+	box-shadow: rgba(0,0,0,0.2) 0px 2px 10px, inset rgba(0,0,0,0.2) 0px -1px 2px;
 }
 
 #mainWrapper, #aboutWrapper, #programWrapper, #footerWrapper {
 	position: relative;
 	margin: 0 auto;
+	padding: 0 0;
 	width: 960px;
-	height: 768px;
-	background: #fff;
-	-webkit-box-shadow: rgba(0,0,0,0.2) 0px 2px 10px, inset rgba(0,0,0,0.2) 0px -1px 2px;
-    -moz-box-shadow: rgba(0,0,0,0.2) 0px 2px 10px, inset rgba(0,0,0,0.2) 0px -1px 2px;
-	box-shadow: rgba(0,0,0,0.2) 0px 2px 10px, inset rgba(0,0,0,0.2) 0px -1px 2px;
-	border: 1px solid green;
+	height: auto;
+	border-bottom: 1px solid green;
 }
 #footerWrapper {
 	height: 30px;
@@ -221,6 +229,7 @@ img.opensampa {
 	width: 942px;
 	font-weight: 600 !important;
 	font-size: 22px !important;
+	z-index: 11;
 }
 #navbar.fixed {
 	position: fixed !important;
@@ -269,11 +278,17 @@ img.opensampa {
     -ms-filter: "FlipV";
 }
 
-#abInfoWrapper {
-	margin-top: 60px;
+#abInfoWrapper, #abSiteWrapper, #progInfoWrapper {
+	position: relative;
+	top: 60px;
 	text-align: center;
+	vertical-align: top;
 }
-.abInfoBox {
+#abSiteWrapper {
+	top: 80px;
+}
+.abInfoBox, .abSiteBox, .progBox {
+	position: relative;
 	display: inline-block;
 	padding: 10px;
 	width: 47%;
@@ -287,6 +302,70 @@ img.opensampa {
 	font-size: 15px;
 	margin-bottom: 30px;
 }
+.local {
+	margin-bottom: 5px;
+}
+.localTitle {
+	margin-top: 0;
+}
+#sponsorsWrapper {
+	text-align: center;
+}
+#google {
+	width: 100%;
+	height: 76px;
+	background: transparent url('../img/google.png') no-repeat 50% 0;
+}
+#sponsorsWrapper {
+	width: 30%;
+}
+#progTable {
+	width: 65%;
+	font-size: 18px;
+}
+.time {
+	font-weight: 600;
+	padding: 10px;
+	border-bottom: 1px solid #ccc;
+}
+.description {
+	border-bottom: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+	padding: 10px;
+}
+span.announcement {
+	font-size: 14px !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
