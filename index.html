@@ -125,35 +125,7 @@
                         </div>
                         <div class="abSiteBox">
                             <div class="gmap">
-                                <style type="text/css">
-                                      html { height: 100% }
-                                      body { height: 100%; margin: 0; padding: 0 }
-                                      #map_canvas { height: 100% }
-                                </style>
                                 <div id="map_canvas" style="width:451px; height:250px"></div>
-                                <script type="text/javascript" 
-                                    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyALcIULM56B430aBfs2IqfzJkSnazcmqao&sensor=false">
-                                </script>
-                                <script type="text/javascript">
-                                    var mapOptions = {
-                                      zoom: 15,
-                                      center: new google.maps.LatLng(-23.586938, -46.682153),
-                                      mapTypeId: google.maps.MapTypeId.ROADMAP,
-                                      streetViewControl: false,
-                                      panControl: false,
-                                      mapTypeControl: false,
-                                      zoomControl: false,
-                                      scaleControl: false
-                                    };
-                                    
-                                    var map = new google.maps.Map(document.getElementById("map_canvas"),
-                                        mapOptions);
-                                        
-                                    var marker = new google.maps.Marker({
-                                        position: new google.maps.LatLng(-23.586938, -46.682153),
-                                        map: map,
-                                    });
-                                </script>
                             </div>
                         </div>
                     </div>
@@ -214,6 +186,29 @@
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
           })();
         
+        </script>
+        <script type="text/javascript" 
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC574UMZjRE37lvBVkhUhUVDkxDRVLYtGc&sensor=false">
+        </script>
+        <script type="text/javascript">
+            var mapOptions = {
+              zoom: 15,
+              center: new google.maps.LatLng(-23.586938, -46.682153),
+              mapTypeId: google.maps.MapTypeId.ROADMAP,
+              streetViewControl: false,
+              panControl: false,
+              mapTypeControl: false,
+              zoomControl: false,
+              scaleControl: false
+            };
+            
+            var map = new google.maps.Map(document.getElementById("map_canvas"),
+                mapOptions);
+                
+            var marker = new google.maps.Marker({
+                position: new google.maps.LatLng(-23.586938, -46.682153),
+                map: map,
+            });
         </script>
     </body>
 </html>

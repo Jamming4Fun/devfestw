@@ -1,11 +1,16 @@
 /* devepoled by Sam Carecho - digiwise at gmail dot com */
+html { height: 100% }
 body {
+	height: 100%;
 	margin: 0;
 	padding: 0;
 	background: #f2f2f2;
 	font-family: 'Open Sans', sans-serif;
 	font-size: 12px;
 }
+
+#map_canvas { height: 100% }
+
 #pageWrapper {
 	width: 100%;
 	margin: 0;
