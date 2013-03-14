@@ -127,6 +127,11 @@ img.opensampa {
 	padding: 0 8px;
 }
 
+.gdgospAd {
+	text-transform: none !important;
+	margin-top: 5px;
+}
+
 .register-bt:hover, .gdgospAd:hover {
     -webkit-box-shadow: 1px 1px 1px rgba(0,0,0,.3);
     -moz-box-shadow: 1px 1px 1px rgba(0,0,0,.3);
