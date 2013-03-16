@@ -116,7 +116,6 @@ img.opensampa {
 	-moz-border-radius: 4px;
 	border-radius: 4px;
 	cursor: pointer;
-	font-size: 11px;
 	font-weight: bold;
 	text-align: center;
 	white-space: nowrap;
@@ -311,7 +310,7 @@ img.opensampa {
 }
 .abSiteBox {
 	display: block;
-	width: 100%;
+	width: 98%;
 }
 
 .infoTitle {
