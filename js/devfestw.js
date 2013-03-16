@@ -4,6 +4,7 @@ $(function() {
     var nbh = $('#navbar').height();
     var boxesH = (hh + ch + nbh);
     var wh = $(window).height();
+    var ww = $(window).width();
      
     if (boxesH < wh) {
         var bottomBoxH = wh - (hh + ch);
@@ -46,7 +47,7 @@ $(function() {
     }
     
     $('#mainWrapper').css('height', wh);
-    $('#aboutWrapper').css('height', wh);
+    $('#aboutWrapper').css('height', wh * 1.5);
     $('#programWrapper').css('height', wh);
     
     
