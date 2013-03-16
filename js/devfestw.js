@@ -1,27 +1,35 @@
 $(function() {
-    var hh = $('#header').height();
-    var ch = $('#contentWrapper').height();
-    var nbh = $('#navbar').height();
-    var boxesH = (hh + ch + nbh);
+	
+	// Boxes Variebles
+	// #mainWrapper boxes
+    var mwhh = $('#header').height();
+    var mwch = $('#contentWrapper').height();
+    var mwnbh = $('#navbar').height();
+    var mwboxesH = (mwhh + mwch + mwnbh);
+    // #aboutWrapper boxes
+    
+    
+    
     var wh = $(window).height();
     var ww = $(window).width();
      
-    if (boxesH < wh) {
-        var bottomBoxH = wh - (hh + ch);
+    //Boxes Calculations
+    //#mainWrapper boxes
+    if (mwboxesH < wh) {
+        var mwbottomBoxH = wh - (mwhh + mwch);
         
-        if (bottomBoxH > nbh) {
-            var blankSpace = bottomBoxH - nbh;
-            var ContentMargin = blankSpace / 2;
+        if (mwbottomBoxH > mwnbh) {
+            var mwBlankSpace = mwbottomBoxH - mwnbh;
+            var mwContentMargin = mwBlankSpace / 2;
             
             $('#contentWrapper').css({
-                'margin-top': ContentMargin,
-                'margin-bottom': ContentMargin 
+                'margin-top': mwContentMargin,
+                'margin-bottom': mwContentMargin 
             });
         }                    
     }
-    
-    if (boxesH > wh){
-        var smallerHH = hh - nbh;
+    if (mwboxesH > wh){
+        var smallerHH = mwhh - mwnbh;
         var devfestwH = $('#devfestw').height();
         var devfestwPercent = (100 * smallerHH) / devfestwH;
         $('#devfestw').css({
@@ -35,12 +43,12 @@ $(function() {
                 top: (18 * devfestwPercent) / 100 });
         $('#header').css('height', smallerHH);
         
-        hh = $('#header').height();
-        ch = $('#contentWrapper').height();
-        nbh = $('#navbar').height();
-        boxesH = (hh + ch + nbh);
+        mwhh = $('#header').height();
+        mwch = $('#contentWrapper').height();
+        mwnbh = $('#navbar').height();
+        mwboxesH = (mwhh + mwch + mwnbh);
         
-        var leftSpace = wh - boxesH;
+        var leftSpace = wh - mwboxesH;
         if (leftSpace > 0) {
             $('#contentWrapper').css('margin-bottom', leftSpace);
         }  
@@ -48,6 +56,8 @@ $(function() {
     
     $('#mainWrapper').css('height', wh);
     $('#aboutWrapper').css('height', wh * 1.5);
+    
+    map_canvas
     $('#programWrapper').css('height', wh);
     
     
