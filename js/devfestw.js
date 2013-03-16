@@ -1,20 +1,21 @@
 $(function() {
 	
-	// Boxes Variebles
-	// #mainWrapper boxes
+	// Boxes dimensions
+	// #mainWrapper
     var mwhh = $('#header').height();
     var mwch = $('#contentWrapper').height();
     var mwnbh = $('#navbar').height();
     var mwboxesH = (mwhh + mwch + mwnbh);
-    // #aboutWrapper boxes
+    // #aboutWrapper
+    var awiwh = $('#abInfoWrapper').height();
+    var awswh = $('#abSiteWrapper').height();
     
-    
-    
+    //Window Dimensions
     var wh = $(window).height();
     var ww = $(window).width();
      
     //Boxes Calculations
-    //#mainWrapper boxes
+    //#mainWrapper pre dimension assignment calculations
     if (mwboxesH < wh) {
         var mwbottomBoxH = wh - (mwhh + mwch);
         
@@ -53,11 +54,56 @@ $(function() {
             $('#contentWrapper').css('margin-bottom', leftSpace);
         }  
     }
-    
-    $('#mainWrapper').css('height', wh);
+	//#mainWrapper dimension assignment
+	$('#mainWrapper').css('height', wh);
+	
+	//#aboutWrapper pre dimension assignment calculations
+	
+    //#aboutWrapper dimension assignment
     $('#aboutWrapper').css('height', wh * 1.5);
+    //#aboutWrapper post dimension assignment calculations
+    var awh = $('#aboutWrapper').height();
+    var aww = $('.abSiteBox').width();
+    var awiwh = $('#abInfoWrapper').height();
+    var awiww = $('#abInfoWrapper').width();
+    var awswh = $('#abSiteWrapper').height();
+    var awsww = $('#abSiteWrapper').width();
     
-    map_canvas
+    var awBoxesH = awiwh + awswh;
+    //var awBoxesW = awiww + awsww;
+    var mCanvasH = (awh * 1.5) - awBoxesH - (awh * .35);
+    $('#map_canvas').css({ 
+    	height: mCanvasH,
+    	width: aww
+    });
+    console.log(aww);
+    console.log(awiwh);
+    console.log(awswh);
+    console.log(awBoxesH);
+    console.log(mCanvasH);
+     
+    
+    var mapOptions = {
+      zoom: 15,
+      center: new google.maps.LatLng(-23.586938, -46.682153),
+      mapTypeId: google.maps.MapTypeId.ROADMAP,
+      streetViewControl: false,
+      panControl: false,
+      scrollwheel: false,
+      mapTypeControl: false,
+      zoomControl: true,
+      draggable: false,
+      scaleControl: false
+    };
+    
+    var map = new google.maps.Map(document.getElementById("map_canvas"),
+        mapOptions);
+        
+    var marker = new google.maps.Marker({
+        position: new google.maps.LatLng(-23.586938, -46.682153),
+        map: map,
+    });
+    
     $('#programWrapper').css('height', wh);
     
     
@@ -69,7 +115,7 @@ $(function() {
         if (y < wh) {
         	removeAtive();
         }
-        else if (y >= wh && y < (wh * 2)){
+        else if (y >= wh && y < (wh * 2.5)){
         	removeAtive();
         	$('#about').addClass('active');
         }

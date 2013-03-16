@@ -20,6 +20,9 @@
         <link rel="stylesheet" type="text/css" href="css/mainstyle.css">
         
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script type="text/javascript" 
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC574UMZjRE37lvBVkhUhUVDkxDRVLYtGc&sensor=false">
+        </script>
         <script src="js/devfestw.js" type="text/javascript"></script>
     </head>
     <body>
@@ -188,29 +191,6 @@
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
           })();
         
-        </script>
-        <script type="text/javascript" 
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC574UMZjRE37lvBVkhUhUVDkxDRVLYtGc&sensor=false">
-        </script>
-        <script type="text/javascript">
-            var mapOptions = {
-              zoom: 15,
-              center: new google.maps.LatLng(-23.586938, -46.682153),
-              mapTypeId: google.maps.MapTypeId.ROADMAP,
-              streetViewControl: false,
-              panControl: false,
-              mapTypeControl: false,
-              zoomControl: false,
-              scaleControl: false
-            };
-            
-            var map = new google.maps.Map(document.getElementById("map_canvas"),
-                mapOptions);
-                
-            var marker = new google.maps.Marker({
-                position: new google.maps.LatLng(-23.586938, -46.682153),
-                map: map,
-            });
         </script>
     </body>
 </html>
