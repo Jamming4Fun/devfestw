@@ -302,12 +302,17 @@ img.opensampa {
 }
 .abInfoBox, .abSiteBox, .progBox {
 	position: relative;
-	display: block;
+	display: inline-block;
 	padding: 10px;
-	width: 100%;
+	width: 46%;
 	text-align: left;
 	vertical-align: top;
 }
+.abSiteBox {
+	display: block;
+	width: 100%;
+}
+
 .infoTitle {
 	font-size: 22px;
 }
