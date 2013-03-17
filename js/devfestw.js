@@ -76,13 +76,7 @@ $(function() {
     	height: mCanvasH,
     	width: aww
     });
-    console.log(aww);
-    console.log(awiwh);
-    console.log(awswh);
-    console.log(awBoxesH);
-    console.log(mCanvasH);
-     
-    
+        
     var mapOptions = {
       zoom: 15,
       center: new google.maps.LatLng(-23.586938, -46.682153),
@@ -104,7 +98,11 @@ $(function() {
         map: map,
     });
     
+    //#programWrapper dimension assignment
     $('#programWrapper').css('height', wh);
+    
+    //#navbar dimension assignment
+    $('#navbar').css('height', ww);
     
     
     //start fixed at scroll nav
