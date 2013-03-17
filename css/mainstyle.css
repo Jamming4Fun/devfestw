@@ -241,6 +241,7 @@ img.opensampa {
 #navbar {
 	position: absolute;
 	width: auto;
+	padding: 0 !important;
 	font-weight: 600 !important;
 	font-size: 22px !important;
 	z-index: 11;
