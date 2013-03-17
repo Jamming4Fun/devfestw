@@ -177,7 +177,7 @@ $(function() {
     });
     //link to registration. Will open a new window.
     $("#register").click(function(){
-        window.open("http://goo.gl/mxdAg", '_blank');
+        window.open("http://devfestwsp.eventbrite.pt/, '_blank');
     });
     //link to gdg +page. Will open a new window.
     $("#gdgospAd, #opensampa").click(function(){
