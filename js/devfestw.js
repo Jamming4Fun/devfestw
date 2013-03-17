@@ -102,7 +102,8 @@ $(function() {
     $('#programWrapper').css('height', wh);
     
     //#navbar dimension assignment
-    $('#navbar').css('width', ww);
+    var nbw = $('#middleWrapper').width();
+    $('#navbar').css('width', nbw);
     
     
     //start fixed at scroll nav
