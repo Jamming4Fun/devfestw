@@ -28,7 +28,7 @@ $(function() {
      
     //Boxes Calculations
     //#mainWrapper pre dimension assignment calculations
-    if (mwboxesH < wh) {
+    if (mwboxesH < wh && ww > 900) {
         var mwbottomBoxH = wh - (mwhh + mwch);
         
         if (mwbottomBoxH > mwnbh) {
@@ -41,7 +41,7 @@ $(function() {
             });
         }             
     }
-    if (mwboxesH > wh){
+    if (mwboxesH > wh && ww > 900){
         var smallerHH = mwhh - mwnbh;
         var devfestwH = $('#devfestw').height();
         var devfestwPercent = (100 * smallerHH) / devfestwH;
@@ -112,7 +112,8 @@ $(function() {
         position: new google.maps.LatLng(-23.586938, -46.682153),
         map: map,
     });
-    
+
+if (ww > 900) {
     //#programWrapper dimension assignment
     $('#programWrapper').css('height', wh);
     
@@ -127,14 +128,14 @@ $(function() {
         var y = $(this).scrollTop();
         
         if (y < wh) {
-        	removeAtive();
+        	removeActive();
         }
         else if (y >= wh && y < (wh * 2.5)){
-        	removeAtive();
+        	removeActive();
         	$('#about').addClass('active');
         }
         else {
-        	removeAtive();
+        	removeActive();
         	$('#program').addClass('active');
         }
         
@@ -145,14 +146,14 @@ $(function() {
         }
     });
     
-    function removeAtive() {
+    function removeActive() {
         $('#about').removeClass('active');
         $('#program').removeClass('active');
     }
     
     //scroll links
     $("#about").click(function(){
-        removeAtive();                  
+        removeActive();                  
         $('html, body').animate({
             scrollTop: $("#aboutWrapper").offset().top
         }, 800);
@@ -160,7 +161,7 @@ $(function() {
         
     });
     $("#program").click(function(){
-        removeAtive();
+        removeActive();
         $('html, body').animate({
             scrollTop: $("#programWrapper").offset().top
         }, 800);
@@ -169,7 +170,7 @@ $(function() {
     
     //scroll arrow
     $("#arrow").click(function(){
-        removeAtive();
+        removeActive();
         var nbPosition = $("#navbar").offset().top;
         if (nbPosition < wh) {
             $('html, body').animate({
@@ -184,7 +185,15 @@ $(function() {
         }
         
     });
-    
+}
+else {
+	$('nav').css('display', 'none');
+	$('#mainWrapper, #aboutWrapper, #programWrapper').css('height', 'auto');
+	$('#abInfoWrapper, #abSiteWrapper, #progInfoWrapper').css({
+		'top': 0,
+		'margin-bottom': 30
+	});
+}
     //send paper link. Will open a new window.
     $("#activity").click(function(){
         window.open("http://goo.gl/L9VxK", '_blank');
