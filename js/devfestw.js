@@ -13,6 +13,18 @@ $(function() {
     //Window Dimensions
     var wh = $(window).height();
     var ww = $(window).width();
+    var mww = $('#middleWrapper').innerWidth();
+    
+    //#middleWrapper width for resolution 1024x768
+    if (ww > 900 && ww < 1024){
+    	//$('#middleWrapper').width(960);
+    	$('#middleWrapper').css('width', 960);
+    }
+    
+    if (mww < 960){
+    	//$('#middleWrapper').width(960);
+    	$('#middleWrapper').css('width', 960);
+    }
      
     //Boxes Calculations
     //#mainWrapper pre dimension assignment calculations
@@ -27,7 +39,7 @@ $(function() {
                 'margin-top': mwContentMargin,
                 'margin-bottom': mwContentMargin 
             });
-        }                    
+        }             
     }
     if (mwboxesH > wh){
         var smallerHH = mwhh - mwnbh;
@@ -56,6 +68,9 @@ $(function() {
     }
 	//#mainWrapper dimension assignment
 	$('#mainWrapper').css('height', wh);
+	
+	//#mainWrapper post dimension assignment calculations
+	
 	
 	//#aboutWrapper pre dimension assignment calculations
 	
@@ -102,7 +117,7 @@ $(function() {
     $('#programWrapper').css('height', wh);
     
     //#navbar dimension assignment
-    var nbw = $('#middleWrapper').width();
+    var nbw = $('#middleWrapper').width() - 2;
     $('#navbar').css('width', nbw);
     
     
